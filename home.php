@@ -10,6 +10,13 @@
     <title>Home</title>
 </head>
 <body>
+
+    <?php 
+        if (!isset($_SESSION["loged_user"])) {
+            header("location: index.php?userMustBeLogged=true");
+            die();
+        }
+    ?>
         
     <div class="alert alert-success">
         <strong>Sucesso!</strong> usuário <?= $_SESSION["loged_user"] ?> logado!

@@ -32,6 +32,15 @@
   
   ?>
 
+
+   <?php if (isset($_GET["userMustBeLogged"])) { ?>
+    <div class="alert alert-danger">
+      <strong>Erro!</strong> usuário precisa se logar antes
+    </div>
+  <?php } ?>
+
+
+
   <?php if (isset($_GET["loginerror"])) { ?>
     <div class="alert alert-danger">
       <strong>Erro!</strong> usuário ou senha inválidos
